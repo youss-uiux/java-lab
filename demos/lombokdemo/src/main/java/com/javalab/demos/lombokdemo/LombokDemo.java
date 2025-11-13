@@ -10,8 +10,19 @@ import com.javalab.demos.lombokdemo.models.Product;
 public class LombokDemo {
     
     public void run() {
-        Logger.info("=== Démonstration Lombok ===");
-        
+        Logger.info("=== Démonstration Lombok ===\n");
+
+        // D'abord, montrer la comparaison Lombok vs Sans Lombok
+        Logger.info("🔍 Partie 1 : COMPARAISON Lombok vs Code Traditionnel");
+        Logger.info("────────────────────────────────────────────────────────");
+        LombokComparison comparison = new LombokComparison();
+        comparison.run();
+
+        // Puis les exemples pratiques
+        Logger.info("\n\n");
+        Logger.info("🔍 Partie 2 : EXEMPLES PRATIQUES D'UTILISATION");
+        Logger.info("────────────────────────────────────────────────────────");
+
         // Démonstration de @Data, @Builder
         Logger.info("\n1. Démonstration de @Data et @Builder avec Person:");
         Person person = Person.builder()

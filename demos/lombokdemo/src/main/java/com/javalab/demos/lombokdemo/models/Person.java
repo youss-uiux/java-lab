@@ -5,9 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * Modèle Person démontrant les annotations Lombok
- */
+
 @Data
 @Builder
 @NoArgsConstructor
