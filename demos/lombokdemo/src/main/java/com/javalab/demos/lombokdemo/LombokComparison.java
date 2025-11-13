@@ -1,8 +1,8 @@
 package com.javalab.demos.lombokdemo;
 
 import com.javalab.core.utils.Logger;
+import com.javalab.demos.lombokdemo.models.Employee;
 import com.javalab.demos.lombokdemo.models.Person;
-import com.javalab.demos.lombokdemo.models.PersonWithoutLombok;
 
 public class LombokComparison {
 
@@ -11,23 +11,14 @@ public class LombokComparison {
     }
 
     private void testBothVersions() {
-        // Test SANS Lombok
-      PersonWithoutLombok personWithout = new PersonWithoutLombok();
-      personWithout.setFirstName("Marie");
-      personWithout.setLastName("Martin");
-      personWithout.setAge(28);
-      personWithout.setEmail("marie.martin@example.com");
-      Logger.info("Sans Lombok : " + personWithout);
 
-        // Test AVEC Lombok
-        Person personWith = Person.builder()
-            .firstName("Marie")
-            .lastName("Martin")
-            .age(28)
-            .email("marie.martin@example.com")
-            .build();
+        Employee employee = new Employee();
+        employee.setFirstName("John");
+        employee.setLastName("Doe");
+        employee.setAge(28);
+        employee.setEmail("marie.martin@example.com");
+        Logger.info("Sans Lombok (Employee) : " + employee);
 
-        Logger.info("Avec Lombok : " + personWith);
     }
 }
 
